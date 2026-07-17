@@ -1,0 +1,47 @@
+{
+  "01_Bill_Reichert": {
+    "file": "脚本/WAIC/人物介绍/photos/01_Bill_Reichert.png",
+    "source": "https://billreichert.com/cdn/shop/files/DAV_6613_1.png?v=1662272159&width=1500",
+    "status": "ok"
+  },
+  "02_Elizabeth_ONeill": {
+    "file": "脚本/WAIC/人物介绍/photos/02_Elizabeth_ONeill.jpg",
+    "source": "https://uchicago.hk/sites/default/files/styles/social/public/2026-01/elizabeth_oneill_headshot_2.jpg?h=8c4461ab&amp;itok=AyywaFyx",
+    "status": "ok"
+  },
+  "03_Dacheng_Xiu_修大成": {
+    "file": "脚本/WAIC/人物介绍/photos/03_Dacheng_Xiu_修大成.jpg",
+    "source": "https://www.nber.org/sites/default/files/styles/profile_picture/public/2024-04/Dacheng%20Xiu.jpg",
+    "status": "ok"
+  },
+  "04_Tong_Huiqi_童慧琦": {
+    "file": "脚本/WAIC/人物介绍/photos/04_Tong_Huiqi_童慧琦.jpg",
+    "source": "https://med.stanford.edu/services/api/cap/profiles/photocache.210783.jpg",
+    "status": "ok"
+  },
+  "05_Esther_Wong_王康曼": {
+    "file": "脚本/WAIC/人物介绍/photos/05_Esther_Wong_王康曼.png",
+    "source": "https://3cagi.vc/og-image.png",
+    "status": "ok"
+  },
+  "06_Klaus_Wehage": {
+    "file": "脚本/WAIC/人物介绍/photos/06_Klaus_Wehage.png",
+    "source": "https://images.squarespace-cdn.com/content/v1/5b9490a0f407b457934b8ad9/1600716028009-ZGBNT9UOVX1BYO0O21U8/Klaus+Wehage%2C+10X+Innovation+Lab.png",
+    "status": "ok"
+  },
+  "07_Rupert_Hoogewerf_胡润": {
+    "file": "脚本/WAIC/人物介绍/photos/07_Rupert_Hoogewerf_胡润.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Rupert_Hoogewerf_2023.jpg/250px-Rupert_Hoogewerf_2023.jpg",
+    "status": "ok"
+  },
+  "08_Gary_Dvorchak": {
+    "file": "脚本/WAIC/人物介绍/photos/08_Gary_Dvorchak.png",
+    "source": "https://s2.q4cdn.com/542136093/files/images/new-persons/2026/Gary-Website-Pic.png",
+    "status": "ok"
+  },
+  "09_Ryan_Bedell": {
+    "file": null,
+    "sources_tried": [],
+    "status": "missing"
+  }
+}
