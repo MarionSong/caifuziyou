@@ -37,32 +37,6 @@ export function ResultScreen({
       <blockquote className="share">
         <p>{result.shareLine}</p>
       </blockquote>
-      <ul className="readings">
-        {result.readings.map((reading) => {
-          const left = ((reading.normalized + 1) / 2) * 100;
-          return (
-            <li key={reading.id}>
-              <div className="reading-head">
-                <span className="reading-name">{reading.name}</span>
-                <span className="reading-lean">
-                  {reading.lean === "mid" ? "两边接近" : reading.lean === "high" ? reading.highLabel : reading.lowLabel}
-                </span>
-              </div>
-              <div className="meter">
-                <div className="meter-labels">
-                  <span>{reading.lowLabel}</span>
-                  <span>{reading.highLabel}</span>
-                </div>
-                <div className="meter-track" aria-hidden="true">
-                  <span className="meter-dot" style={{ left: `${left}%` }} />
-                </div>
-              </div>
-              <p className="reading-sentence">{reading.sentence}</p>
-            </li>
-          );
-        })}
-      </ul>
-      <p className="footnote">这是你在「{pack.scenario}」里的习惯，不是诊断。</p>
       <div className="actions">
         <button type="button" className="primary" onClick={copyLine}>
           {copied ? "已复制" : "复制这句话"}
@@ -77,6 +51,28 @@ export function ResultScreen({
           换一套
         </button>
       </div>
+      <ul className="readings">
+        {result.readings.map((reading) => {
+          const left = ((reading.normalized + 1) / 2) * 100;
+          return (
+            <li key={reading.id}>
+              <div className="reading-head">
+                <span className="reading-name">{reading.name}</span>
+                {reading.lean === "mid" ? <span className="reading-lean">两边接近</span> : null}
+              </div>
+              <div className="meter">
+                <span className={reading.lean === "low" ? "meter-end is-on" : "meter-end"}>{reading.lowLabel}</span>
+                <div className="meter-track" aria-hidden="true">
+                  <span className="meter-dot" style={{ left: `${left}%` }} />
+                </div>
+                <span className={reading.lean === "high" ? "meter-end is-on" : "meter-end"}>{reading.highLabel}</span>
+              </div>
+              <p className="reading-sentence">{reading.sentence}</p>
+            </li>
+          );
+        })}
+      </ul>
+      <p className="footnote">这是你在「{pack.scenario}」里的习惯，不是诊断。</p>
     </section>
   );
 }

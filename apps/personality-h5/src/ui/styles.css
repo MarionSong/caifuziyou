@@ -41,7 +41,7 @@ button {
   padding: calc(22px + env(safe-area-inset-top)) 0 calc(36px + env(safe-area-inset-bottom));
 }
 
-.app[data-accent="moss"] { --accent: #2c4a3e; --accent-ink: #f3f7f4; }
+.app[data-accent="moss"] { --accent: #1f7a52; --accent-ink: #f3faf6; }
 .app[data-accent="cinnabar"] { --accent: #b8432f; --accent-ink: #fff8f2; }
 
 .shell {
@@ -216,15 +216,17 @@ button {
 }
 
 .track {
-  height: 2px;
-  background: var(--line);
+  height: 4px;
+  background: rgba(30, 26, 22, 0.12);
   margin-bottom: 28px;
+  border-radius: 999px;
 }
 
 .track > span {
   display: block;
   height: 100%;
   background: var(--accent);
+  border-radius: 999px;
 }
 
 .prompt {
@@ -310,7 +312,7 @@ button {
   border-top: 1px solid var(--line);
 }
 
-.reading-head, .meter-labels {
+.reading-head {
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -319,18 +321,27 @@ button {
 .reading-name { font-family: var(--serif); font-size: 18px; }
 .reading-lean { color: var(--accent); }
 
-.meter { margin-top: 10px; }
+.meter {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
 
-.meter-labels {
+.meter-end {
   color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.06em;
+  font-size: 13px;
+}
+
+.meter-end.is-on {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .meter-track {
   position: relative;
   height: 2px;
-  margin: 10px 8px 0;
   background: var(--line);
 }
 

@@ -4,7 +4,11 @@ export function HomeScreen({ packs, onOpen }: { packs: readonly TestPack[]; onOp
   return (
     <section className="step">
       <p className="eyebrow">人格测试</p>
-      <h1 className="display">先看清自己怎么相处。</h1>
+      <h1 className="display">
+        先看清
+        <br />
+        自己怎么相处。
+      </h1>
       <p className="lede">
         四件日常的事：怎么开口，怎么判断，怎么推进，怎么处理不合。题库可以换，坐标先留着。
       </p>
