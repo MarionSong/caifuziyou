@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "id": "daily-axes",
+  "title": "日常四轴",
+  "topic": "日常相处",
+  "scenario": "做事、说话和做决定",
+  "intro": "十二道很普通的选择。没有更好的一边，只看你做事、说话、做决定时习惯往哪边靠。做完会得到一个原创类型名，外加四句解释。",
+  "mode": "axis",
+  "balanced": {
+    "title": "还看不出来倒向",
+    "summary": "有些选择互相抵消了，先不要硬套一个类型。",
+    "shareLine": "这几项里，我有的几乎打平。"
+  },
+  "dimensions": [
+    {
+      "id": "express",
+      "name": "表达",
+      "lowLabel": "先想",
+      "highLabel": "先说",
+      "lowSentence": "你习惯先在心里过一遍，想清楚了再开口。",
+      "highSentence": "你习惯先把话放到台面上，场子通常是你热起来的。",
+      "midSentence": "表达这件事上，你两边都靠近，看当天的人和场合。"
+    },
+    {
+      "id": "decide",
+      "name": "判断",
+      "lowLabel": "看事",
+      "highLabel": "看人",
+      "lowSentence": "你做判断时，会先看依据、结果和这件事本身站不站得住。",
+      "highSentence": "你做判断时，会先看人的感受和关系顺不顺。",
+      "midSentence": "人和事你都会看，这一项几乎打平。"
+    },
+    {
+      "id": "pace",
+      "name": "节奏",
+      "lowLabel": "先排",
+      "highLabel": "边做",
+      "lowSentence": "你更愿意先把步骤排好，再按自己的顺序推进。",
+      "highSentence": "你更愿意先动起来，边做边把节奏调顺。",
+      "midSentence": "节奏上你可快可慢，没有固定倒向一边。"
+    },
+    {
+      "id": "conflict",
+      "name": "冲突",
+      "lowLabel": "护场",
+      "highLabel": "直说",
+      "lowSentence": "碰到不合，你会先照顾场面，换一种不容易僵住的说法。",
+      "highSentence": "碰到不合，你会把分歧说清楚，而不是先糊过去。",
+      "midSentence": "冲突方式上你两边都有，要看这件事重不重要。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "prompt": "朋友临时约你出门，你通常会？",
+      "choices": [
+        { "id": "a", "text": "先回「走」，人到了再说", "weights": { "express": 2 } },
+        { "id": "b", "text": "先想今天还剩多少精力", "weights": { "express": -2 } }
+      ]
+    },
+    {
+      "id": "q02",
+      "prompt": "会上冒出一个想法，你更常怎么做？",
+      "choices": [
+        { "id": "a", "text": "先说出来，再一起改", "weights": { "express": 2 } },
+        { "id": "b", "text": "先记下来，想清楚再发", "weights": { "express": -2 } }
+      ]
+    },
+    {
+      "id": "q03",
+      "prompt": "认识新的人时，你通常？",
+      "choices": [
+        { "id": "a", "text": "先听，等有感觉再接话", "weights": { "express": -2 } },
+        { "id": "b", "text": "先开口，把场子热起来", "weights": { "express": 2 } }
+      ]
+    },
+    {
+      "id": "q04",
+      "prompt": "两个方案差不多，你靠什么选？",
+      "choices": [
+        { "id": "a", "text": "看谁更在意，团队感觉如何", "weights": { "decide": 2 } },
+        { "id": "b", "text": "把依据列出来，看哪边站得住", "weights": { "decide": -2 } }
+      ]
+    },
+    {
+      "id": "q05",
+      "prompt": "朋友来诉苦，你的第一反应是？",
+      "choices": [
+        { "id": "a", "text": "先帮对方看问题出在哪", "weights": { "decide": -2 } },
+        { "id": "b", "text": "先接住情绪，让对方被听见", "weights": { "decide": 2 } }
+      ]
+    },
+    {
+      "id": "q06",
+      "prompt": "一件事值不值得做，你先看？",
+      "choices": [
+        { "id": "a", "text": "人开不开心，关系顺不顺", "weights": { "decide": 2 } },
+        { "id": "b", "text": "结果清不清楚，划不划算", "weights": { "decide": -2 } }
+      ]
+    },
+    {
+      "id": "q07",
+      "prompt": "周末有件不大不小的事，你怎么开始？",
+      "choices": [
+        { "id": "a", "text": "先动手，做了再调", "weights": { "pace": 2 } },
+        { "id": "b", "text": "先排时间、步骤和最坏情况", "weights": { "pace": -2 } }
+      ]
+    },
+    {
+      "id": "q08",
+      "prompt": "计划被打乱时，你更接近？",
+      "choices": [
+        { "id": "a", "text": "会想把后面的安排重排整齐", "weights": { "pace": -2 } },
+        { "id": "b", "text": "换条路继续，不太难受", "weights": { "pace": 2 } }
+      ]
+    },
+    {
+      "id": "q09",
+      "prompt": "学习或开工的时候，你习惯？",
+      "choices": [
+        { "id": "a", "text": "先做一小段，找到感觉再加码", "weights": { "pace": 2 } },
+        { "id": "b", "text": "先看完框架，再开始第一项", "weights": { "pace": -2 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "prompt": "合作里你不同意对方，你通常？",
+      "choices": [
+        { "id": "a", "text": "当场说清楚差在哪", "weights": { "conflict": 2 } },
+        { "id": "b", "text": "先换种说法，避免当场僵住", "weights": { "conflict": -2 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "prompt": "群里意见不一致，你更可能？",
+      "choices": [
+        { "id": "a", "text": "私聊，或者等大家都缓一缓", "weights": { "conflict": -2 } },
+        { "id": "b", "text": "直接把分歧点出来", "weights": { "conflict": 2 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "prompt": "有人越界时，你通常会？",
+      "choices": [
+        { "id": "a", "text": "明确告诉对方，停在哪里", "weights": { "conflict": 2 } },
+        { "id": "b", "text": "用安排和距离，把边界做出来", "weights": { "conflict": -2 } }
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "spark",
+      "name": "点火人",
+      "summary": "你进场就会把人和事往前带，边感受边调整，有话也搁不住。",
+      "shareLine": "我是点火人：先说，看人，边做边改，分歧摊开讲。",
+      "poles": { "express": "high", "decide": "high", "pace": "high", "conflict": "high" }
+    },
+    {
+      "id": "warmer",
+      "name": "暖场人",
+      "summary": "你负责把气氛点着，也负责不让它烧起来。",
+      "shareLine": "我是暖场人：话先出口，判断看人，推进很快，冲突会留台阶。",
+      "poles": { "express": "high", "decide": "high", "pace": "high", "conflict": "low" }
+    },
+    {
+      "id": "anchor",
+      "name": "主心骨",
+      "summary": "你把人放在前面，步骤也清楚，该硬的时候不含糊。",
+      "shareLine": "我是主心骨：先照顾人，再把路铺平，不同意就直说。",
+      "poles": { "express": "high", "decide": "high", "pace": "low", "conflict": "high" }
+    },
+    {
+      "id": "host",
+      "name": "主持人",
+      "summary": "你像在主持一场相处，既让每个人被看见，也不让场面散掉。",
+      "shareLine": "我是主持人：会开口，会看人，有安排，也给台阶。",
+      "poles": { "express": "high", "decide": "high", "pace": "low", "conflict": "low" }
+    },
+    {
+      "id": "breaker",
+      "name": "破局手",
+      "summary": "你用事实开路，说干就干，卡住了就直接把结拆开。",
+      "shareLine": "我是破局手：先讲清楚，看结果，马上试，分歧不绕。",
+      "poles": { "express": "high", "decide": "low", "pace": "high", "conflict": "high" }
+    },
+    {
+      "id": "translator",
+      "name": "转译者",
+      "summary": "你能把复杂的事讲明白，也愿意把棱角收一收再递出去。",
+      "shareLine": "我是转译者：话直，判断看依据，行动很快，表达留余地。",
+      "poles": { "express": "high", "decide": "low", "pace": "high", "conflict": "low" }
+    },
+    {
+      "id": "setter",
+      "name": "定调人",
+      "summary": "你先把标准说清楚，再按顺序推进，偏差会当场指出来。",
+      "shareLine": "我是定调人：开口就定方向，看依据，有步骤，不和稀泥。",
+      "poles": { "express": "high", "decide": "low", "pace": "low", "conflict": "high" }
+    },
+    {
+      "id": "dispatcher",
+      "name": "调度员",
+      "summary": "你把事情排进格子里，对外说得清楚，对内尽量不起冲突。",
+      "shareLine": "我是调度员：会表达，重依据，重秩序，冲突留到私下。",
+      "poles": { "express": "high", "decide": "low", "pace": "low", "conflict": "low" }
+    },
+    {
+      "id": "sincere",
+      "name": "真情派",
+      "summary": "你话不多，但一旦认定，感受和态度都很真，也不躲分歧。",
+      "shareLine": "我是真情派：想清楚再说，看人，边走边近，不舒服会说。",
+      "poles": { "express": "low", "decide": "high", "pace": "high", "conflict": "high" }
+    },
+    {
+      "id": "companion",
+      "name": "陪伴者",
+      "summary": "你靠在旁边，用感觉前进，把尖锐的话留到对方接得住的时候。",
+      "shareLine": "我是陪伴者：慢一点开口，先接住人，节奏随对方，冲突会绕开。",
+      "poles": { "express": "low", "decide": "high", "pace": "high", "conflict": "low" }
+    },
+    {
+      "id": "planner",
+      "name": "谋定者",
+      "summary": "你把在意的人放进长期安排里，该坚持的边界也不口头糊弄。",
+      "shareLine": "我是谋定者：少说，重感情，重安排，底线会讲明白。",
+      "poles": { "express": "low", "decide": "high", "pace": "low", "conflict": "high" }
+    },
+    {
+      "id": "keeper",
+      "name": "守夜人",
+      "summary": "你安静地守着关系和秩序，冲突来了也先让大家都还在场上。",
+      "shareLine": "我是守夜人：话少，心软，有安排，尽量不把场面弄僵。",
+      "poles": { "express": "low", "decide": "high", "pace": "low", "conflict": "low" }
+    },
+    {
+      "id": "checker",
+      "name": "校对员",
+      "summary": "你不爱寒暄，先核对事实，试一次，不对就直说。",
+      "shareLine": "我是校对员：想好再说，看依据，先试一小步，错了就指出。",
+      "poles": { "express": "low", "decide": "low", "pace": "high", "conflict": "high" }
+    },
+    {
+      "id": "observer",
+      "name": "观察员",
+      "summary": "你先看，再小步试，判断靠依据，表达上给别人留面子。",
+      "shareLine": "我是观察员：少开口，重事实，小步试，冲突放轻。",
+      "poles": { "express": "low", "decide": "low", "pace": "high", "conflict": "low" }
+    },
+    {
+      "id": "architect",
+      "name": "架构师",
+      "summary": "你在后面把结构搭好，依据摆清楚，该否定的不会因为气氛放过。",
+      "shareLine": "我是架构师：话少，看事，先布局，不同意就说。",
+      "poles": { "express": "low", "decide": "low", "pace": "low", "conflict": "high" }
+    },
+    {
+      "id": "ballast",
+      "name": "压舱石",
+      "summary": "你让场面稳下来：想清楚，看依据，按顺序，也不把冲突推到台前。",
+      "shareLine": "我是压舱石：沉得住，重依据，有步骤，先护住场面。",
+      "poles": { "express": "low", "decide": "low", "pace": "low", "conflict": "low" }
+    }
+  ]
+}
