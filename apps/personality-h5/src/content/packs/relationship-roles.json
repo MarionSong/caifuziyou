@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "id": "relationship-roles",
+  "title": "同屋的人",
+  "topic": "同屋",
+  "scenario": "这栋房子里你在意的那个人",
+  "intro": "还是这栋房子，七天。这次只看你怎么对待屋里那个你在意的人。结果不是类型字母，是你更容易扮演的角色。",
+  "mode": "nearest",
+  "balanced": {
+    "title": "还没有固定角色",
+    "summary": "你在这些现场里的选择互相抵消了，眼下还套不进一个角色。",
+    "shareLine": "在这栋房子里，我对这个人还没有固定角色。"
+  },
+  "dimensions": [
+    {
+      "id": "express",
+      "name": "表达",
+      "lowLabel": "先想",
+      "highLabel": "先说",
+      "lowSentence": "对这个人，你习惯先观察，等对方靠近了再开口。",
+      "highSentence": "对这个人，你习惯先开口、先靠近。冷场时多半是你把话接上。",
+      "midSentence": "你会不会先找对方说话，要看这一天的距离。"
+    },
+    {
+      "id": "decide",
+      "name": "判断",
+      "lowLabel": "看事",
+      "highLabel": "看人",
+      "lowSentence": "你判断这段同屋，先看事实、边界和期待是否对得上。",
+      "highSentence": "你判断这段同屋，先看对方的感受还顺不顺。",
+      "midSentence": "感受和依据你都会看，这一项几乎打平。"
+    },
+    {
+      "id": "pace",
+      "name": "节奏",
+      "lowLabel": "先排",
+      "highLabel": "边做",
+      "lowSentence": "你会按自己撑得住的节奏来，喜欢想好再往前。",
+      "highSentence": "你愿意让这段关系边住边近，很少先把每一步排死。",
+      "midSentence": "快和慢你都能接受，节奏上没有固定倒向。"
+    },
+    {
+      "id": "conflict",
+      "name": "冲突",
+      "lowLabel": "护场",
+      "highLabel": "直说",
+      "lowSentence": "不舒服时你先护住场面，把话换成对方接得住的说法。",
+      "highSentence": "不舒服时你会说出来，不想把分歧攒过这七天。",
+      "midSentence": "你会不会把冲突摊开，要看这件事伤不伤你们的同住。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "prompt": "第一晚，你在意的那个人没怎么说话。",
+      "choices": [
+        { "id": "a", "text": "你端着杯子过去，先抛一个话题。", "weights": { "express": 1 } },
+        { "id": "b", "text": "你隔一会儿看一眼。对方看过来，你再聊。", "weights": { "express": 0 } },
+        { "id": "c", "text": "你等对方先靠近。", "weights": { "express": -1 } }
+      ]
+    },
+    {
+      "id": "q02",
+      "prompt": "你想约对方单独出门。",
+      "choices": [
+        { "id": "a", "text": "你等一个更自然的时机。", "weights": { "express": -1 } },
+        { "id": "b", "text": "你在屋里说自己要出门，看对方接不接。", "weights": { "express": 0 } },
+        { "id": "c", "text": "你直接说：“一起去吗？”", "weights": { "express": 1 } }
+      ]
+    },
+    {
+      "id": "q03",
+      "prompt": "今天有件高兴的事，你想分享。",
+      "choices": [
+        { "id": "a", "text": "吃饭时你顺口提一嘴。", "weights": { "express": 0 } },
+        { "id": "b", "text": "你马上找对方说。", "weights": { "express": 1 } },
+        { "id": "c", "text": "你自己先放着。", "weights": { "express": -1 } }
+      ]
+    },
+    {
+      "id": "q04",
+      "prompt": "对方心情不好，一个人待在阳台。",
+      "choices": [
+        { "id": "a", "text": "你问对方想被怎样陪。", "weights": { "decide": 1 } },
+        { "id": "b", "text": "你陪着站一会儿。对方想说，你再听。", "weights": { "decide": 0 } },
+        { "id": "c", "text": "你问发生了什么，下一步怎么办。", "weights": { "decide": -1 } }
+      ]
+    },
+    {
+      "id": "q05",
+      "prompt": "这几天相处下来，你在想要不要再近一步。",
+      "choices": [
+        { "id": "a", "text": "你主要看期待是否一致、相处是否稳得住。", "weights": { "decide": -1 } },
+        { "id": "b", "text": "你把开心的部分和对不上的部分都记下，先不决定。", "weights": { "decide": 0 } },
+        { "id": "c", "text": "你主要看彼此在一起开不开心。", "weights": { "decide": 1 } }
+      ]
+    },
+    {
+      "id": "q06",
+      "prompt": "你们吵了一架。要不要先让步，你怎么判断？",
+      "choices": [
+        { "id": "a", "text": "你先离开一会儿，晚上再决定谁先开口。", "weights": { "decide": 0 } },
+        { "id": "b", "text": "你看对方受不受伤，这段关系还紧不紧。", "weights": { "decide": 1 } },
+        { "id": "c", "text": "你看谁的理由更站得住。", "weights": { "decide": -1 } }
+      ]
+    },
+    {
+      "id": "q07",
+      "prompt": "你觉得关系可以再近一点。速度上你更接受？",
+      "choices": [
+        { "id": "a", "text": "感觉对了，你就往前。", "weights": { "pace": 1 } },
+        { "id": "b", "text": "你把自己的节奏说出来，跟对方对齐再动。", "weights": { "pace": 0 } },
+        { "id": "c", "text": "你按自己撑得住的速度，一步步来。", "weights": { "pace": -1 } }
+      ]
+    },
+    {
+      "id": "q08",
+      "prompt": "约好的出门被对方临时改掉。",
+      "choices": [
+        { "id": "a", "text": "你先把后面的时间重新排好。", "weights": { "pace": -1 } },
+        { "id": "b", "text": "你问清楚改到什么时候，再决定去不去。", "weights": { "pace": 0 } },
+        { "id": "c", "text": "改了就改了，人到了就行。", "weights": { "pace": 1 } }
+      ]
+    },
+    {
+      "id": "q09",
+      "prompt": "碰到一件你们都没处理过的事。",
+      "choices": [
+        { "id": "a", "text": "你先看对方怎么做，再决定跟不跟。", "weights": { "pace": 0 } },
+        { "id": "b", "text": "你先试一次，再看对方的反应。", "weights": { "pace": 1 } },
+        { "id": "c", "text": "你先想清楚自己的底线，再行动。", "weights": { "pace": -1 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "prompt": "对方做了一件让你不舒服的事。",
+      "choices": [
+        { "id": "a", "text": "你当场告诉对方。", "weights": { "conflict": 1 } },
+        { "id": "b", "text": "你记下来，等只剩你们两个人时再说。", "weights": { "conflict": 0 } },
+        { "id": "c", "text": "你先缓一缓，换一种不容易僵住的说法。", "weights": { "conflict": -1 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "prompt": "你们对一件事的看法相反。",
+      "choices": [
+        { "id": "a", "text": "你先找一个双方都能接受的说法。", "weights": { "conflict": -1 } },
+        { "id": "b", "text": "你先各自说完理由，再看有没有都能留的部分。", "weights": { "conflict": 0 } },
+        { "id": "c", "text": "你把分歧摊在桌面上。", "weights": { "conflict": 1 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "prompt": "对方越界了。",
+      "choices": [
+        { "id": "a", "text": "你告诉对方界限在哪里，但不在众人面前说。", "weights": { "conflict": 0 } },
+        { "id": "b", "text": "你直接说：“这样不行。”", "weights": { "conflict": 1 } },
+        { "id": "c", "text": "你用距离和安排，让边界自己出现。", "weights": { "conflict": -1 } }
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "driver",
+      "name": "带动者",
+      "summary": "对这个人，你常常是那个先开口、先约、先把进度往前推的人。",
+      "shareLine": "在这栋房子里，我对这个人是带动者。",
+      "vector": { "express": 0.85, "decide": 0.35, "pace": 0.8, "conflict": 0.75 }
+    },
+    {
+      "id": "stabilizer",
+      "name": "稳住场的人",
+      "summary": "你不一定话最多，但你会把你们的节奏和场面托住，不让这七天忽快忽慢。",
+      "shareLine": "在这栋房子里，我对这个人是稳住场的人。",
+      "vector": { "express": 0.25, "decide": 0.15, "pace": -0.7, "conflict": -0.45 }
+    },
+    {
+      "id": "watcher",
+      "name": "观察者",
+      "summary": "你先看清楚对方，再决定要不要靠近、要不要表态。",
+      "shareLine": "在这栋房子里，我对这个人是观察者。",
+      "vector": { "express": -0.85, "decide": -0.45, "pace": -0.25, "conflict": -0.55 }
+    },
+    {
+      "id": "harmonizer",
+      "name": "调和者",
+      "summary": "你对对方的感受很敏。分歧来了，会先找两边都能站的地方。",
+      "shareLine": "在这栋房子里，我对这个人是调和者。",
+      "vector": { "express": 0.15, "decide": 0.85, "pace": 0.05, "conflict": -0.85 }
+    },
+    {
+      "id": "straight",
+      "name": "直球选手",
+      "summary": "你把期待、边界和判断说在明处，不太用暗示推进这七天。",
+      "shareLine": "在这栋房子里，我对这个人是直球选手。",
+      "vector": { "express": 0.65, "decide": -0.7, "pace": 0.45, "conflict": 0.9 }
+    },
+    {
+      "id": "slowburn",
+      "name": "慢热陪伴",
+      "summary": "你热得慢。一旦在意，就会安安静静地陪，冲突也尽量不撕开。",
+      "shareLine": "在这栋房子里，我对这个人是慢热陪伴。",
+      "vector": { "express": -0.55, "decide": 0.75, "pace": -0.45, "conflict": -0.65 }
+    }
+  ]
+}

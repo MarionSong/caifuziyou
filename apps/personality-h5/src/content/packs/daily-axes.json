@@ -1,0 +1,276 @@
+{
+  "version": 1,
+  "id": "daily-axes",
+  "title": "这栋房子",
+  "topic": "七天合宿",
+  "scenario": "和陌生人住一周的生活综艺",
+  "intro": "导演把你和几个陌生人关在一栋房子里，拍七天。没有人设脚本。下面十二个现场，选你当时真的会做的那一件。三项分别往两端靠，或停在中间。",
+  "mode": "axis",
+  "balanced": {
+    "title": "还看不出来倒向",
+    "summary": "有些现场你停在中间，先不要硬套一个类型。",
+    "shareLine": "在这栋房子里，我有几项几乎打平。"
+  },
+  "dimensions": [
+    {
+      "id": "express",
+      "name": "表达",
+      "lowLabel": "先想",
+      "highLabel": "先说",
+      "lowSentence": "房子里你习惯先听完，想清楚了再决定说不说。",
+      "highSentence": "房子里冷场的时候，多半是你先把话放出来。",
+      "midSentence": "你会不会先开口，要看这一晚的气氛。"
+    },
+    {
+      "id": "decide",
+      "name": "判断",
+      "lowLabel": "看事",
+      "highLabel": "看人",
+      "lowSentence": "你做判断时，会先看规则、结果和这件事本身站不站得住。",
+      "highSentence": "你做判断时，会先看谁不自在、这段同住顺不顺。",
+      "midSentence": "人和事你都会看，这一项几乎打平。"
+    },
+    {
+      "id": "pace",
+      "name": "节奏",
+      "lowLabel": "先排",
+      "highLabel": "边做",
+      "lowSentence": "你更愿意先把时间和分工排好，再让这栋房子转起来。",
+      "highSentence": "流程乱了你也愿意先动起来，边做边把节奏找回来。",
+      "midSentence": "节奏上你可快可慢，没有固定倒向一边。"
+    },
+    {
+      "id": "conflict",
+      "name": "冲突",
+      "lowLabel": "护场",
+      "highLabel": "直说",
+      "lowSentence": "碰到不合，你会先让这一顿饭、这一晚还能继续。",
+      "highSentence": "碰到不合，你会在这屋里把分歧说清楚。",
+      "midSentence": "你会不会把冲突摊开，要看这件事会不会伤到同住的人。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "prompt": "第一晚，客厅里。导演说每人一分钟介绍自己。",
+      "choices": [
+        { "id": "a", "text": "你先举手，把这第一分钟接过来。", "weights": { "express": 1 } },
+        { "id": "b", "text": "你等两个人说过，再看自己要不要接。", "weights": { "express": 0 } },
+        { "id": "c", "text": "你靠在沙发上，听完再决定说不说。", "weights": { "express": -1 } }
+      ]
+    },
+    {
+      "id": "q02",
+      "prompt": "晚饭冷场了，有人一直在看手机。",
+      "choices": [
+        { "id": "a", "text": "你也安静吃饭，不觉得这桌必须热起来。", "weights": { "express": -1 } },
+        { "id": "b", "text": "你给旁边的人夹一筷子菜，让谈话自己发生。", "weights": { "express": 0 } },
+        { "id": "c", "text": "你抛一个所有人都能接的话题。", "weights": { "express": 1 } }
+      ]
+    },
+    {
+      "id": "q03",
+      "prompt": "拍摄空档，有人过来找你搭话。",
+      "choices": [
+        { "id": "a", "text": "你回应几句。对方停了，你也不追。", "weights": { "express": 0 } },
+        { "id": "b", "text": "你顺着聊下去，还把旁边的人拉进来。", "weights": { "express": 1 } },
+        { "id": "c", "text": "你点头听着，话不多。", "weights": { "express": -1 } }
+      ]
+    },
+    {
+      "id": "q04",
+      "prompt": "分组做任务。两组方案都能交差，你帮哪一组？",
+      "choices": [
+        { "id": "a", "text": "你选大家做得更开心、关系更顺的那组。", "weights": { "decide": 1 } },
+        { "id": "b", "text": "你两边都问一遍，看谁更想做。", "weights": { "decide": 0 } },
+        { "id": "c", "text": "你选规则更清楚、结果更好交的那组。", "weights": { "decide": -1 } }
+      ]
+    },
+    {
+      "id": "q05",
+      "prompt": "有人在镜头外哭了。",
+      "choices": [
+        { "id": "a", "text": "你先问发生了什么，看这件事怎么收场。", "weights": { "decide": -1 } },
+        { "id": "b", "text": "你把水和纸巾放过去，等对方开口。", "weights": { "decide": 0 } },
+        { "id": "c", "text": "你先坐过去，问对方想不想被陪。", "weights": { "decide": 1 } }
+      ]
+    },
+    {
+      "id": "q06",
+      "prompt": "晚上要投票：谁留下，参加明天的外出。",
+      "choices": [
+        { "id": "a", "text": "你听完每个人的理由，再举手。", "weights": { "decide": 0 } },
+        { "id": "b", "text": "你看谁被落下会受伤。", "weights": { "decide": 1 } },
+        { "id": "c", "text": "你看谁对明天的任务更有用。", "weights": { "decide": -1 } }
+      ]
+    },
+    {
+      "id": "q07",
+      "prompt": "导演临时改流程，下午的安排全乱了。",
+      "choices": [
+        { "id": "a", "text": "你说先做眼前这件事，后面再补。", "weights": { "pace": 1 } },
+        { "id": "b", "text": "你问清下一项是什么，再决定动不动。", "weights": { "pace": 0 } },
+        { "id": "c", "text": "你想先把剩下的时间重排整齐。", "weights": { "pace": -1 } }
+      ]
+    },
+    {
+      "id": "q08",
+      "prompt": "房子里要做一顿晚饭，没有菜谱。",
+      "choices": [
+        { "id": "a", "text": "你先分好谁买菜、谁切菜、几点开饭。", "weights": { "pace": -1 } },
+        { "id": "b", "text": "你先看冰箱里有什么，再决定做哪几道。", "weights": { "pace": 0 } },
+        { "id": "c", "text": "你打开冰箱就开始做，边做边调。", "weights": { "pace": 1 } }
+      ]
+    },
+    {
+      "id": "q09",
+      "prompt": "游戏规则你没完全听懂，马上要开始。",
+      "choices": [
+        { "id": "a", "text": "你让别人先示范一轮，你第二轮再上。", "weights": { "pace": 0 } },
+        { "id": "b", "text": "你先玩一局，玩错了再改。", "weights": { "pace": 1 } },
+        { "id": "c", "text": "你把规则问清楚再上场。", "weights": { "pace": -1 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "prompt": "有人动了你放在公共区的东西。",
+      "choices": [
+        { "id": "a", "text": "你当场告诉对方：下次先问你。", "weights": { "conflict": 1 } },
+        { "id": "b", "text": "你把东西拿回来，之后找个单独的时机说。", "weights": { "conflict": 0 } },
+        { "id": "c", "text": "你先不说，把自己的东西收进房间。", "weights": { "conflict": -1 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "prompt": "两个人为了镜头争吵，全屋都看着。",
+      "choices": [
+        { "id": "a", "text": "你打圆场，把话题岔开，让这顿饭能继续。", "weights": { "conflict": -1 } },
+        { "id": "b", "text": "你让他们先各自说完，再决定要不要接。", "weights": { "conflict": 0 } },
+        { "id": "c", "text": "你把分歧说清楚：到底在争什么。", "weights": { "conflict": 1 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "prompt": "有人一直开你的玩笑，你不舒服。",
+      "choices": [
+        { "id": "a", "text": "你笑一下，过后私下告诉对方。", "weights": { "conflict": 0 } },
+        { "id": "b", "text": "你直接说：“这个玩笑停一下。”", "weights": { "conflict": 1 } },
+        { "id": "c", "text": "你不拆穿，后面少跟对方单独相处。", "weights": { "conflict": -1 } }
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "spark",
+      "name": "点火人",
+      "summary": "这栋房子里，你进门就会把人带起来。话先说，人先顾，事情边做边改，不合也搁不住。",
+      "shareLine": "在这栋房子里，我是点火人：先说，看人，边做边改，分歧摊开讲。",
+      "poles": { "express": "high", "decide": "high", "pace": "high", "conflict": "high" }
+    },
+    {
+      "id": "warmer",
+      "name": "暖场人",
+      "summary": "你把这屋的气氛点着，也负责不让这一顿饭烧起来。",
+      "shareLine": "在这栋房子里，我是暖场人：话先出口，判断看人，推进很快，冲突会留台阶。",
+      "poles": { "express": "high", "decide": "high", "pace": "high", "conflict": "low" }
+    },
+    {
+      "id": "anchor",
+      "name": "主心骨",
+      "summary": "你照看着人，也把后面几天铺平。该硬的时候不含糊。",
+      "shareLine": "在这栋房子里，我是主心骨：先照顾人，再把路铺平，不同意就直说。",
+      "poles": { "express": "high", "decide": "high", "pace": "low", "conflict": "high" }
+    },
+    {
+      "id": "host",
+      "name": "主持人",
+      "summary": "你像在主持这栋房子：每个人都被看见，场面也不散。",
+      "shareLine": "在这栋房子里，我是主持人：会开口，会看人，有安排，也给台阶。",
+      "poles": { "express": "high", "decide": "high", "pace": "low", "conflict": "low" }
+    },
+    {
+      "id": "breaker",
+      "name": "破局手",
+      "summary": "你拿规则和结果开路，说做就做，卡住了就把结拆开。",
+      "shareLine": "在这栋房子里，我是破局手：先讲清楚，看结果，马上试，分歧不绕。",
+      "poles": { "express": "high", "decide": "low", "pace": "high", "conflict": "high" }
+    },
+    {
+      "id": "translator",
+      "name": "转译者",
+      "summary": "你把乱掉的事情讲明白，也愿意把棱角收一收，再递给同屋的人。",
+      "shareLine": "在这栋房子里，我是转译者：话直，判断看依据，行动很快，表达留余地。",
+      "poles": { "express": "high", "decide": "low", "pace": "high", "conflict": "low" }
+    },
+    {
+      "id": "setter",
+      "name": "定调人",
+      "summary": "你先把这屋的标准说清楚，再按顺序推进。偏了你会当场指出来。",
+      "shareLine": "在这栋房子里，我是定调人：开口就定方向，看依据，有步骤，不和稀泥。",
+      "poles": { "express": "high", "decide": "low", "pace": "low", "conflict": "high" }
+    },
+    {
+      "id": "dispatcher",
+      "name": "调度员",
+      "summary": "你把七天排进格子里。对外说得清楚，冲突尽量不摆到客厅。",
+      "shareLine": "在这栋房子里，我是调度员：会表达，重依据，重秩序，冲突留到私下。",
+      "poles": { "express": "high", "decide": "low", "pace": "low", "conflict": "low" }
+    },
+    {
+      "id": "sincere",
+      "name": "真情派",
+      "summary": "你话不多。一旦认定谁，态度很真，不舒服也会说。",
+      "shareLine": "在这栋房子里，我是真情派：想清楚再说，看人，边走边近，不舒服会说。",
+      "poles": { "express": "low", "decide": "high", "pace": "high", "conflict": "high" }
+    },
+    {
+      "id": "companion",
+      "name": "陪伴者",
+      "summary": "你靠在旁边，跟着对方的感觉走。尖锐的话留到对方接得住的时候。",
+      "shareLine": "在这栋房子里，我是陪伴者：慢一点开口，先接住人，节奏随对方，冲突会绕开。",
+      "poles": { "express": "low", "decide": "high", "pace": "high", "conflict": "low" }
+    },
+    {
+      "id": "planner",
+      "name": "谋定者",
+      "summary": "你把在意的人放进这七天的安排里，底线也不口头糊弄。",
+      "shareLine": "在这栋房子里，我是谋定者：少说，重感情，重安排，底线会讲明白。",
+      "poles": { "express": "low", "decide": "high", "pace": "low", "conflict": "high" }
+    },
+    {
+      "id": "keeper",
+      "name": "守夜人",
+      "summary": "你安静地守着这栋房子的秩序。冲突来了，也先让大家都还在场上。",
+      "shareLine": "在这栋房子里，我是守夜人：话少，心软，有安排，尽量不把场面弄僵。",
+      "poles": { "express": "low", "decide": "high", "pace": "low", "conflict": "low" }
+    },
+    {
+      "id": "checker",
+      "name": "校对员",
+      "summary": "你不爱寒暄。先核对事实，试一次，不对就说。",
+      "shareLine": "在这栋房子里，我是校对员：想好再说，看依据，先试一小步，错了就指出。",
+      "poles": { "express": "low", "decide": "low", "pace": "high", "conflict": "high" }
+    },
+    {
+      "id": "observer",
+      "name": "观察员",
+      "summary": "你先看这屋里发生了什么，再小步试。判断靠依据，话说得轻。",
+      "shareLine": "在这栋房子里，我是观察员：少开口，重事实，小步试，冲突放轻。",
+      "poles": { "express": "low", "decide": "low", "pace": "high", "conflict": "low" }
+    },
+    {
+      "id": "architect",
+      "name": "架构师",
+      "summary": "你在后面把住处的结构搭好。该否定的，不会因为气氛放过。",
+      "shareLine": "在这栋房子里，我是架构师：话少，看事，先布局，不同意就说。",
+      "poles": { "express": "low", "decide": "low", "pace": "low", "conflict": "high" }
+    },
+    {
+      "id": "ballast",
+      "name": "压舱石",
+      "summary": "你让这栋房子稳下来：想清楚，看依据，按顺序，也不把冲突推到客厅。",
+      "shareLine": "在这栋房子里，我是压舱石：沉得住，重依据，有步骤，先护住场面。",
+      "poles": { "express": "low", "decide": "low", "pace": "low", "conflict": "low" }
+    }
+  ]
+}
