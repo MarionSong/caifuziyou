@@ -3,14 +3,14 @@ import type { TestPack } from "../../engine/types";
 export function HomeScreen({ packs, onOpen }: { packs: readonly TestPack[]; onOpen: (packId: string) => void }) {
   return (
     <section className="step">
-      <p className="eyebrow">人格测试</p>
+      <p className="eyebrow">七天合宿</p>
       <h1 className="display">
-        先看清
+        你被关进
         <br />
-        自己怎么相处。
+        一栋房子。
       </h1>
       <p className="lede">
-        四件日常的事：怎么开口，怎么判断，怎么推进，怎么处理不合。题库可以换，坐标先留着。
+        和几个陌生人住一周，拍一档生活综艺。没有剧本。十二个现场，看你怎么开口、怎么判断、怎么把这七天过下去。
       </p>
       <ol className="pack-list">
         {packs.map((pack, index) => (

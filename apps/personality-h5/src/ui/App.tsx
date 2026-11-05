@@ -99,7 +99,7 @@ export function App() {
             </div>
           </div>
           <p className="mast-copy">
-            底层是可替换的题库。同一套页面，可以先测日常习惯，再测一段关系里的角色。后面的综艺人物，也挂在这四个坐标上。
+            第一场是这栋房子。先看你在屋里是哪种人，再看你怎么对那个在意的人。后面的综艺人物，也挂在这四个坐标上。
           </p>
         </header>
         <main className="stage">

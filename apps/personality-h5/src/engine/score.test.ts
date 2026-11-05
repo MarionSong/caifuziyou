@@ -87,6 +87,19 @@ describe("题库", () => {
     expect(relationship.mode).toBe("nearest");
   });
 
+  it("每题三项，计分是 +1、0、-1", () => {
+    for (const pack of packs) {
+      for (const question of pack.questions) {
+        expect(question.choices).toHaveLength(3);
+        for (const choice of question.choices) {
+          expect(Object.keys(choice.weights)).toHaveLength(1);
+        }
+        const weights = question.choices.flatMap((choice) => Object.values(choice.weights));
+        expect(new Set(weights)).toEqual(new Set([1, 0, -1]));
+      }
+    }
+  });
+
   it("日常四轴覆盖全部 16 种组合", () => {
     const signatures = new Set(
       daily.archetypes.map((archetype) => daily.dimensions.map((dimension) => archetype.poles?.[dimension.id]).join("/")),
@@ -102,6 +115,19 @@ describe("计分", () => {
     expect(result.title).toBe("点火人");
     expect(result.readings.every((reading) => reading.lean === "high" && reading.normalized === 1)).toBe(true);
     expect(result.polesLabel).toBe("先说 · 看人 · 边做 · 直说");
+  });
+
+  it("三项都选中间时不硬套类型", () => {
+    const answers: Record<string, string> = {};
+    for (const question of daily.questions) {
+      const middle = question.choices.find((choice) => Object.values(choice.weights).every((weight) => weight === 0));
+      if (!middle) throw new Error(`题目 ${question.id} 没有 0 分选项`);
+      answers[question.id] = middle.id;
+    }
+    const result = resolveResult(daily, answers);
+    expect(result.archetypeId).toBeNull();
+    expect(result.title).toBe("还看不出来倒向");
+    expect(result.readings.every((reading) => reading.lean === "mid")).toBe(true);
   });
 
   it("全选负分一端得到压舱石", () => {

@@ -31,8 +31,10 @@ export function QuestionScreen({
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
       if (!question) return;
-      if (event.key === "1") chooseOnce(question.choices[0].id);
-      if (event.key === "2" && question.choices[1]) chooseOnce(question.choices[1].id);
+      const choiceIndex = Number(event.key) - 1;
+      if (Number.isInteger(choiceIndex) && question.choices[choiceIndex]) {
+        chooseOnce(question.choices[choiceIndex].id);
+      }
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);

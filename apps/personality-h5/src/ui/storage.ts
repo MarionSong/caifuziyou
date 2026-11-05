@@ -1,7 +1,7 @@
 import { restoreSession } from "../engine/session";
 import type { Session, TestPack } from "../engine/types";
 
-const KEY = "banbu.session.v1";
+const KEY = "banbu.session.v2";
 
 export function loadSession(packs: readonly TestPack[]): Session {
   try {
