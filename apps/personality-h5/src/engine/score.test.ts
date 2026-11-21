@@ -167,6 +167,22 @@ describe("计分", () => {
     expect(() => resolveResult(broken, { q1: "a" })).toThrow(/无法计分/);
   });
 
+  it("按三个人各自的选项走，会靠近对应的人", () => {
+    const pack = packs.find((item) => item.id === "huang-choices");
+    if (!pack) throw new Error("缺少三个人的选择题库");
+    const expected = { j: "jensen", l: "lori", h: "huang-le" } as const;
+    for (const [choiceId, archetypeId] of Object.entries(expected)) {
+      const answers: Record<string, string> = {};
+      for (const question of pack.questions) {
+        expect(question.choices.some((choice) => choice.id === choiceId)).toBe(true);
+        answers[question.id] = choiceId;
+      }
+      const result = resolveResult(pack, answers);
+      expect(result.archetypeId).toBe(archetypeId);
+      expect(result.similarity).toBeGreaterThan(0.99);
+    }
+  });
+
   it("相处角色全正分接近带动者，全负分接近观察者", () => {
     const outward = resolveResult(relationship, answersToward(relationship, 1));
     const inward = resolveResult(relationship, answersToward(relationship, -1));

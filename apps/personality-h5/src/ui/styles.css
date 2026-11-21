@@ -43,6 +43,7 @@ button {
 
 .app[data-accent="moss"] { --accent: #1f7a52; --accent-ink: #f3faf6; }
 .app[data-accent="cinnabar"] { --accent: #b8432f; --accent-ink: #fff8f2; }
+.app[data-accent="ink"] { --accent: #2c4c7c; --accent-ink: #f4f7fb; }
 
 .shell {
   display: grid;
@@ -295,11 +296,17 @@ button {
   background: rgba(255, 253, 248, 0.55);
 }
 
+.lede,
+.summary {
+  text-wrap: pretty;
+}
+
 .share p {
   margin: 0;
   font-family: var(--serif);
   font-size: 18px;
   line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .readings {

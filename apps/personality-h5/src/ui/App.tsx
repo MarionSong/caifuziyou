@@ -9,7 +9,7 @@ import { QuestionScreen } from "./screens/QuestionScreen";
 import { ResultScreen } from "./screens/ResultScreen";
 import { loadSession, saveSession } from "./storage";
 
-const ACCENTS = ["cinnabar", "moss"] as const;
+const ACCENTS = ["cinnabar", "moss", "ink"] as const;
 
 function accentFor(session: Session): (typeof ACCENTS)[number] {
   if (session.phase === "home") return "cinnabar";
@@ -99,7 +99,7 @@ export function App() {
             </div>
           </div>
           <p className="mast-copy">
-            第一场是这栋房子。先看你在屋里是哪种人，再看你怎么对那个在意的人。后面的综艺人物，也挂在这四个坐标上。
+            第一场是这栋房子。先看你在屋里是哪种人，再看你怎么对那个在意的人。第三场换一套坐标，按黄仁勋、Lori、黄乐公开走过的选择来靠近。
           </p>
         </header>
         <main className="stage">

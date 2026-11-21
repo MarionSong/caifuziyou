@@ -1,6 +1,7 @@
 import { validatePack } from "../engine/validate";
 import type { TestPack } from "../engine/types";
 import dailyAxes from "./packs/daily-axes.json";
+import huangChoices from "./packs/huang-choices.json";
 import relationshipRoles from "./packs/relationship-roles.json";
 
 function load(raw: unknown): TestPack {
@@ -8,7 +9,7 @@ function load(raw: unknown): TestPack {
 }
 
 /** 首页按这个顺序渲染。加一套题：放入 packs/，再在这里登记。 */
-export const packs: readonly TestPack[] = [load(dailyAxes), load(relationshipRoles)];
+export const packs: readonly TestPack[] = [load(dailyAxes), load(relationshipRoles), load(huangChoices)];
 
 export function getPack(id: string): TestPack {
   const pack = packs.find((item) => item.id === id);
