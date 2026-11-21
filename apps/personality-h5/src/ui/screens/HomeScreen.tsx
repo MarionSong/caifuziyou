@@ -10,7 +10,7 @@ export function HomeScreen({ packs, onOpen }: { packs: readonly TestPack[]; onOp
         一栋房子。
       </h1>
       <p className="lede">
-        和几个陌生人住一周，拍一档生活综艺。没有剧本。十二个现场，看你怎么开口、怎么判断、怎么把这七天过下去。
+        和几个陌生人住一周，拍一档生活综艺。没有剧本。十二个现场，看你怎么开口、怎么判断、怎么把这七天过下去。另一套题换了现场，按黄仁勋、Lori、黄乐公开走过的选择来出。
       </p>
       <ol className="pack-list">
         {packs.map((pack, index) => (
